@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Information</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="src/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="src/scripts/jquery.min.js" type="text/javascript"></script>
+        <script src="src/scripts/jquery.validate.js" type="text/javascript"></script>
+        <script src="src/scripts/information.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <form id="frm_send_cgi" action="cgi_bin/reply1.pl" class="form-horizontal">
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="control-label col-md-4">First name<span class="required"> * </span></label>
+                    <div class="col-md-8">
+                        <input type="text" autofocus class="form-control input-sm" name="txt_first_name" id="txt_first_name" autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4">Family name<span class="required"> * </span></label>
+                    <div class="col-md-8">
+                        <input type="text" autofocus class="form-control input-sm" name="txt_family_name" id="txt_family_name" autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4">Email address<span class="required"> * </span></label>
+                    <div class="col-md-8">
+                        <input type="text" autofocus class="form-control input-sm" name="txt_email_name" id="txt_email_name" autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4">Date of birth<span class="required"> * </span></label>
+                    <div class="col-md-8">
+                        <input type="text" autofocus class="form-control input-sm" name="txt_birthday_name" id="txt_birthday_name" autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Favourite Sport</label>
+                    <select class="form-control select2me input-sm" id="cbo_favourite_sport" name="cbo_favourite_sport">
+                        <option value="all" selected class="lb_all"> All </option>
+                        <option value="d"> PC </option>
+                        <option value="m"> Mobile </option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn green"><i class='fa fa-save'></i><span class="lb_savechange">Save Changes</span></button>
+            </div>
+        </form>
+        <script>
+            jQuery(document).ready(function () {
+                Information.init();
+            });
+        </script>
+    </body>
+</html>
